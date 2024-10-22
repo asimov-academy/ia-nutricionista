@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ia-nutricionista"
+version = "0.1.0"
+description = ""
+authors = ["Samuel Sublate <samuelsublate.dev@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "nutritionist" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain-community = "^0.3.0"
+langchainhub = "^0.1.21"
+langgraph = "^0.2.21"
+sqlalchemy = "^2.0.34"
+python-dotenv = "^1.0.1"
+openai = "^1.47.0"
+langchain-openai = "^0.2.0"
+python-telegram-bot = "^21.6"
+pyrogram = "^2.0.106"
+tgcrypto = "^1.2.5"
+apscheduler = "^3.10.4"
+psycopg2-binary = "^2.9.9"
+langchain = "^0.3.1"
+langchain-core = "^0.3.7"
+pillow = "^10.4.0"
+tinydb = "^4.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

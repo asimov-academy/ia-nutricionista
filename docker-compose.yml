@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  app:
+    image: python:3.12.6-bullseye
+    container_name: app
+    working_dir: /app
+    volumes:
+      - .:/app
+    env_file:
+      - .env 
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    command: >
+      /bin/bash -c "
+      pip install --no-cache-dir -r requirements.txt &&
+      python nutritionist/app.py
+      "
+    networks:
+      - asimov
+
+networks:
+  asimov:
+    external: true
